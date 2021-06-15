@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Image from 'react-bootstrap/Image';
+
 
 export class Map extends Component {
   render() {
@@ -7,7 +7,8 @@ export class Map extends Component {
       <div>
         <img
           className="map"
-          src={`https://maps.locationiq.com/v3/staticmap?key=pk.d36871f015649f915282f374cff76628&q&center=${this.props.cityData.lat},${this.props.cityData.lon}&zoom=15`}
+          src={`https://maps.locationiq.com/v3/staticmap?key=pk.c98c5a5eaed3e8c5599b633879a6f7b6&q=${this.props.cityData.lat},${this.props.cityData.lon}&zoom=15`}
+         
           alt=""
         />
       </div>
@@ -16,3 +17,5 @@ export class Map extends Component {
 }
 
 export default Map;
+
+//const axiosResponse = await axios.get(`https://us1.locationiq.com/v1/search.php?key=pk.c98c5a5eaed3e8c5599b633879a6f7b6&q=${this.state.cityName}&format=json`);

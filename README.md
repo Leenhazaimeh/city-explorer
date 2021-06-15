@@ -6,30 +6,24 @@
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-<!-- Provide a high level overview of what this application is and why you are building it, beyond the fact that it's an assignment for this class. (i.e. What's your problem domain?) -->
+This website allows users to explore any location by typing the location name in the input field and as a result, the Lat and the Long will be displayed with a map of that location and you can zoom in and out.
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
+Used Libraries - React - Axios - Bootstrap I also used locationiq API, so first signup and copy your key, and put it inside an env file
 
 ## Architecture
-<!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
+for the design, I only used Bootstrap library and some CSS.
 
 ## Change Log
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
+15-6-2021 7:19pm - Application now has a fully-functional location search.
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
-Time Estimates
-For each of the lab features, make an estimate of the time it will take you to complete the feature, and record your start and finish times for that feature:
+lab requaerment , Tammim hamoudi demo , dana keswane ,raghed anees , yahea abu khallil
 
-Name of feature: ________________________________
+Estimate of time needed to complete: 1:00 hour
 
-Estimate of time needed to complete: _____
+Start time: 3:30pm
 
-Start time: _____
+Finish time: 7:20pm
 
-Finish time: _____
-
-Actual time needed to complete: _____
+Actual time needed to complete: 6 hours
