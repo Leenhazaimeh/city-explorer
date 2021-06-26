@@ -1,58 +1,42 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Card from 'react-bootstrap/Card';
+import react from 'react';
+import Table from 'react-bootstrap/Table';
 
 
-export class Movies extends Component {
-
-    constructor(props){
-        super(props);
-        this.state={
-            
-            error:'',
-            
-        }
-    }
+class Movies extends react.Component{
     
-    
-    render() {
-        return (
-            <div>
-               
-                
-
-                { this.props.moviesData.map(item=>{
-                    return ( <Card style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src={item.link} />
-                    <Card.Body>
-                      <Card.Title>{item.title}</Card.Title>
-                      <Card.Text>
-                        Movie Description: {item.overview}
-                      </Card.Text>
-                      <Card.Text>
-                      Average Votes for it : {item.averageVotes}
-                      </Card.Text>
-                      <Card.Text>
-                      Total Votes for it : {item.totalVotes}
-                      </Card.Text>
-                      <Card.Text>
-                      Popularity for this Movie : {item.popularity}
-                      </Card.Text>
-                      <Card.Text>
-                      Realeased Date : {item.realeasedDate}
-                      </Card.Text>
-                      
-                    </Card.Body>
-                  </Card>
-                 )
-
-                })}
-           
-                 
-              
+    render(){
+        return(
+            <Table striped bordered hover style={{'margin-top':'2%'}}>
+                <thead>
+                    <tr>
+                        <th>movie name</th>
+                        <th>overview</th>
+                        <th>average vote</th>
+                        <th>popularity</th>
+                        <th>release date</th>
+                    </tr>
+                </thead>
+                <tbody>
                     
-            </div>
+                    
+                        {
+                            
+                            this.props.moviesData.map(value=>{
+                                return (<tr>
+                                    <td>{value.title}</td>
+                                    <td>{value.overview}</td>
+                                    <td>{value.avera_gevote}</td>
+                                    <td>{value.popularity}</td>
+                                    <td>{value.release_date}</td>
+                                    </tr>)
+                            })
+                        }
+                        
+                        
+                   
+                </tbody>
+            </Table>
+
         )
     }
 }
