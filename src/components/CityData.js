@@ -1,15 +1,17 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 export class CityData extends Component {
-  render() {
-    return (
-      <div>
-        <p className="city">{this.props.cityData.display_name}</p>
-        <p className="city">{this.props.cityData.lat}</p>
-        <p className="city">{this.props.cityData.lon}</p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div style={{margin: '70px 60px'}}>
+               <p>
+                {this.props.cityDat.display_name}
+              </p>
+              <p>{this.props.cityDat.lat}</p>
+            <p>{this.props.cityDat.lon}</p><br></br>
+            </div>
+        )
+    }
 }
 
-export default CityData;
+export default CityData

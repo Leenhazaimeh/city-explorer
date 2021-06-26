@@ -1,47 +1,35 @@
-import React, { Component } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Card from 'react-bootstrap/Card';
+import React, { Component } from 'react'
 import ListGroup from 'react-bootstrap/ListGroup';
-
-
+import WeatherDay from './WeatherDay';
 
 export class Weather extends Component {
-
-    constructor(props){
-        super(props);
-        this.state={
-            
-            error:'',
-            
-        }
-    }
-    
-    
     render() {
+      console.log('weather data',this.props);
         return (
-            <div>
-               
+            <>
+            {
+                 this.props.weather.map(value => {
+                return (
+                 <>
+                <WeatherDay
                 
-
-                { this.props.forcastData.map(item=>{
-                    return (  <Card className='card'style={{ width: '18rem' }}>
-                  <ListGroup variant="flush">
-                      <ListGroup.Item>{item.date}</ListGroup.Item>
-                   <ListGroup.Item>{item.description}</ListGroup.Item>
-                      
-              </ListGroup>
-                 </Card>
-                 )
-
-                })}
-           
-                 
-              
+                description={value.description}
+                date= {value.date}
+                
+                />
+                  {/* <ListGroup  style={{ width: "30%" , margin: '50px 60px' , textAlign: 'center'}}>
                     
-            </div>
+                  </ListGroup>
+                   <ListGroup  style={{ width: "30%" , margin: '20px 60px' , textAlign: 'center'}}>
+                  
+                 </ListGroup> */}
+                 </>
+                )
+              })
+              }
+        </>
         )
     }
 }
 
-export default Weather;
+export default Weather
